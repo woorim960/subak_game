@@ -35,11 +35,11 @@ let fruitQTan = false;
 let fruitSlowDown = false;
 
 // 오른쪽 위 아이콘을 눌러 과일 교환: false를 true로 변경하시면 됩니다
-let clickChangeFruit = true;
+let clickChangeFruit = false;
 
 // 광고 링크: false 또는 위 빈 문자열은 광고로 넘어가지 않음을 나타냅니다
-let adLink =
-  "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png";
+// let adLink =
+// "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png";
 
 // 웹페이지 제목 수정: "SWU 기독 서랑제"으로 대체
 document.getElementsByTagName("title")[0].innerText = "SWU 기독 서랑제";
