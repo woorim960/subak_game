@@ -1,45 +1,48 @@
 /**
- * 声明，本项目仅帮助大家学习技术及娱乐，切勿将修改后的网站大规模传播及商用，以避免侵权！
+ * 성명, 본 프로젝트는 단지 여러분의 기술 및 오락에 도움을 줄 뿐입니다. 절대 수정된 웹사이트를 대규모로 전파 및 상용하여 침해로부터 자유로워지지 마십시오!
  */
 
-// 额外分数：修改数字
+// 추가 점수: 숫자 수정
 let extraScore = 1;
 
-// 无敌模式：true 改为 false
+// 무적 모드: true false로 변경
 let wuDi = true;
 
-// 第一个水果：修改数字为 0-10, 0 为葡萄，9 为半个西瓜
+// 첫 번째 과일: 0-10, 0은 포도, 9는 수박 반쪽
 let firstFruit = 0;
 
-// 水果合成反转：false 改为 true
+// 과일 합성 반전: false를 true로 변경
 let reverseLevelUp = false;
 
-// 指定生成的水果：默认值: 不开启反转 0-5 开启反转 6-11，修改对应数字即可控制随机生成的水果范围
-const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 生成随机水果最小值（0-10）0 为葡萄，9 为半个西瓜
-const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 生成随机水果最大值（1-11）0 为葡萄，9 为半个西瓜
+// 생성된 과일 지정: 기본값: 반전 0-5를 켜지 않고 반전 6-11을 켜고 해당 숫자를 수정하면 임의 생성된 것을 제어할 수 있습니다.과일 범위
+const minRandomFruitNum = reverseLevelUp ? 6 : 0; // 무작위 과일 생성 최소치(0-10)0 포도를 위해, 9는 수박 반쪽이다.
+const maxRandomFruitNum = reverseLevelUp ? 11 : 5; // 무작위 과일 생성 최대치(1-11)0은 포도이고, 9는 수박 반쪽이다.
 let setFruits = {
-  // 指定前几次生成的水果，可填入任意数量的数字，0 为葡萄，9 为半个西瓜
+  // 지정 전에 생성된 과일은 임의의 수량을 채울 수 있으며 0은 포도, 9는 수박 반쪽입니다
   startFruits: reverseLevelUp ? [10, 10, 9, 8, 8, 7] : [0, 0, 1, 2, 2, 3],
   randomFunction: () => {
-    return minRandomFruitNum + Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum));
-  }
-}
+    return (
+      minRandomFruitNum +
+      Math.floor(Math.random() * (maxRandomFruitNum - minRandomFruitNum))
+    );
+  },
+};
 
-// 让水果更 Q 弹：false 改为大于 0 小于 1 的任意小数（推荐 0.9）
+// 과일을 더Q탄: false를 0보다 작은 임의의 소수(0.9 추천)로 변경
 let fruitQTan = false;
 
-// 让水果下落缓慢：false 改为大于 0 的任意数，值越大阻力越大，下落越慢（推荐 5）
+// 과일의 낙하를 더디게 하기 : false를 0보다 큰 임의의 수로 변경하고, 값이 클수록 저항이 커지며, 낙하가 느려집니다 (5 추천)
 let fruitSlowDown = false;
 
-// 点击右上方图标更换水果：false 改为 true 即可
+// 오른쪽 위 아이콘을 눌러 과일 교환: false를 true로 변경하시면 됩니다
 let clickChangeFruit = true;
 
-// 广告链接：false 或为空字符串表示不会跳转到广告
-let adLink = 'https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png';
+// 광고 링크: false 또는 위 빈 문자열은 광고로 넘어가지 않음을 나타냅니다
+let adLink =
+  "https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/yupi_wechat.png";
 
-// 修改网页标题：将 "合成大西瓜" 进行替换
-document.getElementsByTagName("title")[0].innerText = '合成大西瓜';
+// 웹페이지 제목 수정: "SWU 기독 서랑제"으로 대체
+document.getElementsByTagName("title")[0].innerText = "SWU 기독 서랑제";
 
-// 开启选分弹窗：将 false 改为 true
+// 팝업 창 열기: false를 true로 변경
 let selectModal = false;
-
